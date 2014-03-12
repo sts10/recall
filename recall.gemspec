@@ -6,10 +6,10 @@ require 'recall/version'
 Gem::Specification.new do |spec|
   spec.name          = "recall"
   spec.version       = Recall::VERSION
-  spec.authors       = ["sts10"]
+  spec.authors       = ["Sam Schlinkert"]
   spec.email         = ["sschlinkert@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "Simple Local Code Search"
+  spec.description   = "Search a local directory for a specific query"
   spec.homepage      = ""
   spec.license       = "MIT"
 
