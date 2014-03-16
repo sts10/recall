@@ -2,14 +2,20 @@
 require 'recall'
 
 
-# puts "hello world"
+if !ENV["RECALL_DIR"]
+  puts "Where would you like to search (please input a absolute path)?"
+  search_path = gets.chomp
+
+  # ENV["RECALL_DIR"] = search_path 
+  `export RECALL_DIR=#{search_path}`
+end
 
 
 puts "What would you like to search for?"
 query = gets.chomp
 
 
-my_results = Recall::Results.new(query)
+my_results = Recall::Results.new(query, ENV["RECALL_DIR"])
 
 site_generator = Recall::SiteGenerator.new(my_results.get_full_snippet)
 

@@ -3,8 +3,10 @@ class Recall::Results
 
   ALL = []
 
-  def initialize(query)
+  def initialize(query, search_path)
+
     @query = query
+    @search_path = search_path
   end
 
   def url 
@@ -35,8 +37,8 @@ class Recall::Results
   end
 
   def get_grep_results
-    format_query # 
-    return `grep -r -n -i --include=*.rb "#{@query}" /Users/samschlinkert/Documents/code/flatiron | sort -r`
+    format_query #                                   # /Users/samschlinkert/Documents/code/flatiron
+    return `grep -r -n -i --include=*.rb "#{@query}" #{@search_path} | sort -r`
   end
 
   Result = Struct.new(:file_path, :line_number, :code_snippet, :full_code) 
