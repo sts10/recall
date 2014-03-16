@@ -16,10 +16,6 @@ Recall is a simple Ruby app, run via the command line, to recursively search you
  
 ## Installation
 
-From your command line, enter:
-
-`gem "recall", :git => "git://github.com/sts10/recall.git"` 
-
 
 ## Use
 
