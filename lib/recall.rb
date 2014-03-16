@@ -1,5 +1,9 @@
 require "recall/version"
+require 'erb'
 
 module Recall
-  # Your code goes here...
+  autoload :Results, 'recall/results'
+  autoload :SiteGenerator, 'recall/site_generator'
+  
+  
 end

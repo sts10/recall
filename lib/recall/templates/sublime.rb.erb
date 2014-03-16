@@ -1,0 +1,10 @@
+### Output from Recall search
+<% @results.each do |result| %>
+
+###########################
+
+# File: <%= result.file_path %>
+# Starting at line number: <%= result.line_number %>... 
+
+  <% result.full_code.each { |line| %><%= line %><% } %>
+<% end %>
