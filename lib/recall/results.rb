@@ -1,6 +1,4 @@
-
- 
-class Results   
+class Recall::Results   
   attr_accessor :results_string
 
   ALL = []

@@ -1,16 +1,22 @@
-
-class SiteGenerator 
+class Recall::SiteGenerator 
 
   def initialize(results)
     @results = results
   end
   def make_page!
-    template_doc= File.open("lib/templates/sublime.rb.erb", "r")
+
+
+
+    template_file = File.expand_path("../templates/sublime.rb.erb", __FILE__)
+
+    template_doc= File.open(template_file)
 
     template = ERB.new(template_doc.read)
-    
-    File.open("_site/ruby_file.rb", "w") do |f|
 
+    output_file = File.expand_path("../_site/ruby_file.rb", __FILE__)
+    
+    File.open(output_file, "w") do |f|
+    
         f.write(
           template.result(binding)
         )
@@ -18,7 +24,9 @@ class SiteGenerator
       f.close
     end
 
-    `open _site/ruby_file.rb` 
+    `open #{output_file}` 
+    
+
   end
 
 end
