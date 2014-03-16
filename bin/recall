@@ -45,6 +45,8 @@ if query == "change_dir"
     f.close
   end
 
+  puts ""
+  puts ""
   puts "Now searching #{@search_path}"
   puts ""
   puts "What would you like to search for?"
