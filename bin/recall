@@ -2,9 +2,6 @@
 require 'recall'
 
 
-# puts "hello world"
-
-
 puts "What would you like to search for?"
 query = gets.chomp
 
