@@ -15,5 +15,5 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
-lib/recall/_site/ruby_file.rb
-lib/recall/search_map.txt
+*/ruby_file.rb
+*/search_map.txt
