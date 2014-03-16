@@ -16,6 +16,9 @@ Recall is a simple Ruby app, run via the command line, to recursively search you
  
 ## Installation
 
+From your command line, enter:
+
+`gem install recall`
 
 ## Use
 
