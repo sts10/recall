@@ -1,21 +1,58 @@
 #!/usr/bin/env ruby
 require 'recall'
 
+search_map = File.expand_path("../../lib/recall/search_map.txt", __FILE__)
 
-if !ENV["RECALL_DIR"]
-  puts "Where would you like to search (please input a absolute path)?"
-  search_path = gets.chomp
 
-  # ENV["RECALL_DIR"] = search_path 
-  `export RECALL_DIR=#{search_path}`
+if File.zero?(search_map)
+  puts "Where would you like to search? (Please input a absolute path.)"
+  @search_path = gets.chomp
+  
+  File.open(search_map, "w") do |f|
+  
+      f.write(
+        @search_path
+      )
+    
+    f.close
+  end
 end
 
 
+File.open(search_map, "r") do |f|
+  f.each_line do |line|
+    @search_path = line 
+  end
+end
+
+puts "Currently searching #{@search_path}"
+puts "Enter 'change_dir' to change the search directory."
+puts ''
 puts "What would you like to search for?"
 query = gets.chomp
 
 
-my_results = Recall::Results.new(query, ENV["RECALL_DIR"])
+if query == "change_dir"
+  puts "Where would you like to search? (Please input a absolute path.)"
+  @search_path = gets.chomp
+  
+  File.open(search_map, "w") do |f|
+  
+      f.write(
+        @search_path
+      )
+    
+    f.close
+  end
+
+  puts "Now searching #{@search_path}"
+  puts ""
+  puts "What would you like to search for?"
+  query = gets.chomp
+end
+
+
+my_results = Recall::Results.new(query, @search_path)
 
 site_generator = Recall::SiteGenerator.new(my_results.get_full_snippet)
 
