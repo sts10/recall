@@ -20,7 +20,7 @@ Huge thanks to [Kevin Curtin](https://twitter.com/kcurtin) for getting the gem w
 
 The first time users run `Recall`, they'll be prompted to enter the absolute path of their desired search directory (most likely the user's main "code" directory). 
 
-Once the user sets his or her prefered search directory, Recall accepts a search query and will recursively search through all of the .rb files in that directory for mentions of the query. An example of a typcial query would be a semi-exotic Ruby method like `.each_with_object`. 
+Once the user sets his or her prefered search directory, Recall accepts a search query and will recursively search through all of the .rb and .erb files in that directory for mentions of the query. An example of a typcial query would be a semi-exotic Ruby method like `.each_with_object`. 
 
 When it's completed its search, Recall opens a new .rb file in the user's default text editor, presenting all of the search results it found. When the user is finished with the results, he or she can simply close it. The results file is overwritten with each subsequent search.
  
@@ -40,6 +40,6 @@ Your search directory will persist until you change it. To change the search dir
 
 ## Notes
 
-Currently, Recall only searches files with the .rb extension. 
+Currently, Recall only searches files with the .rb or the .erb extensions. 
 
 
