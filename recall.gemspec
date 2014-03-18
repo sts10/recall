@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sschlinkert@gmail.com"]
   spec.summary       = "Simple Local Code Search"
   spec.description   = "Search a local directory for a specific query"
-  spec.homepage      = "http://sts10.github.io"
+  spec.homepage      = "https://github.com/sts10/recall"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

@@ -38,7 +38,7 @@ class Recall::Results
 
   def get_grep_results
     format_query #                                   # /Users/samschlinkert/Documents/code/flatiron
-    return `grep -r -n -i --include=*.rb "#{@query}" #{@search_path} | sort -r`
+    return `grep -r -n -i --include=*.rb --include=*.erb "#{@query}" #{@search_path} | sort -r`
   end
 
   Result = Struct.new(:file_path, :line_number, :code_snippet, :full_code) 
