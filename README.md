@@ -1,4 +1,4 @@
-# Recall v. 0.0.2
+# Recall
 
 [![Gem Version](https://badge.fury.io/rb/recall.png)](http://badge.fury.io/rb/recall)
 
