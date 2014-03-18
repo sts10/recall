@@ -1,6 +1,7 @@
-# Recall
-
 # Recall v. 0.0.2
+
+[![Gem Version](https://badge.fury.io/rb/recall.png)](http://badge.fury.io/rb/recall)
+
 #### A command line interface that searches for previous examples of Ruby code based on user's query and present results in default Ruby editor.
 
 > [E]ach time the natural laziness which deters us from every difficult enterprise, every work of importance, has urged me to leave the thing alone, to drink my tea and to think merely of the worries of today and of my hopes for tomorrow, which let themselves be pondered over without effort or distress of mind. 
