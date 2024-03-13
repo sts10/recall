@@ -7,15 +7,9 @@ Search local Ruby code files.
 
 > And suddenly the memory returns. The taste was that of the little crumb of madeleine... 
 
-## Overview
+**Note**: This was the first Ruby gem I ever wrote, written in 2014 while I was a student and not updated since then, so you probably use grep or [ripgrep](https://github.com/BurntSushi/ripgrep) instead!
 
-Ever want to find a piece of code you've written but aren't sure which project or file you wrote it in? 
-
-Recall is a simple Ruby Gem, run via the command line, to search your the Ruby files in your code folder. 
-
-Huge thanks to [Kevin Curtin](https://twitter.com/kcurtin) for getting the gem working!
- 
-## What it Does
+## What Recall does
 
 The first time users run `Recall`, they'll be prompted to enter the absolute path of their desired search directory (most likely the user's main "code" directory). 
 
@@ -31,10 +25,14 @@ From your command line, enter:
 
 ## Usage
 
-To use recall, simply type `recall` into your command line from any directory. The first time you call the gem it will ask for the absolute path of a directory for it to search. Then it will ask for a search query. It will search all of the .rb files in that directory, recursively, and present the results in a new .rb file. 
+To use recall, simply type `recall` into your command line from any directory. The first time you call the gem it will ask for the absolute path of a directory for it to search -- typically your large "code" directory. 
+
+Then Recall will ask for a search query. It will search all of the `.rb` files in that directory, recursively, and present the results in a new `.rb` file. 
 
 Your search directory will persist until you change it. To change the search directory, enter `change_dir` into the prompt. 
 
 ## Notes
-
 Currently, Recall only searches files with the `.rb` or the `.erb` extensions. 
+
+## Thanks
+Huge thanks to [Kevin Curtin](https://twitter.com/kcurtin) for getting the gem working!
