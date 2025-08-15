@@ -7,7 +7,7 @@ Search local Ruby code files.
 
 > And suddenly the memory returns. The taste was that of the little crumb of madeleine... 
 
-**Note**: This was the first Ruby gem I ever wrote, written in 2014 while I was a student and not updated since then, so you probably use grep or [ripgrep](https://github.com/BurntSushi/ripgrep) instead!
+**Note**: This was the first Ruby gem I ever wrote, written in 2014 while I was a student and not updated since then, so you should probably use grep or [ripgrep](https://github.com/BurntSushi/ripgrep) instead!
 
 ## What Recall does
 
